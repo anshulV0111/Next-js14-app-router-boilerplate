@@ -1,0 +1,111 @@
+.pagination-wrap {
+  margin: 1.5rem 0;
+  
+  .pagination-box {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+
+    .pagination-btn {
+      width: 1.875rem;
+      height: fit-content;
+      border-radius: 0.5rem;
+      aspect-ratio: 1/1;
+      color: var(--white-1000);
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1;
+      padding: 0.5rem;
+      filter: drop-shadow(0 0 10px var(--secondaryMain-600));
+      -webkit-filter: drop-shadow(0 0 10px var(--secondaryMain-600));
+      position: relative;
+      transition: 200ms all ease-in-out;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-width: 2px;
+        border-style: solid;
+        border-color: var(--white-200);
+        border-radius: inherit;
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        transition: 200ms all ease-in-out;
+      }
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(var(--secondaryMain-1000), var(--secondaryDark-1000));
+        border-radius: inherit;
+        opacity: 0;
+        z-index: -1;
+        pointer-events: none;
+        position: absolute;
+        inset: 0;
+        transition: 200ms all ease-in-out;
+      }
+
+      svg {
+        width: 0.875rem;
+        height: 0.875rem;
+        fill: var(--white-1000);
+        transition: 200ms all ease-in-out;
+      }
+
+      &.only-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          width: 0.875rem;
+          height: 0.875rem;
+          fill: var(--white-1000);
+          transition: 200ms all ease-in-out;
+        }
+      }
+
+      &:hover:not(:disabled, .active) {
+        background: var(--secondaryMain-250);
+        color: var(--secondaryMain-1000);
+        transform: scale(0.95);
+
+        &::before {
+          border-color: var(--secondaryMain-1000);
+        }
+
+        svg {
+          fill: var(--secondaryMain-1000);
+        }
+      }
+
+      &:active:not(:disabled, .active) {
+        transform: scale(0.85);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      &.active {
+        color: var(--white-1000);
+        filter: drop-shadow(0 0 10px var(--secondaryMain-600));
+        -webkit-filter: drop-shadow(0 0 10px var(--secondaryMain-600));
+    
+        &::before {
+          border-color: var(--white-200);
+        }
+    
+        &::after {
+          background: linear-gradient(var(--secondaryMain-1000), var(--secondaryDark-1000));
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

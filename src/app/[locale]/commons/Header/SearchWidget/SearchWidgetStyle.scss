@@ -1,0 +1,37 @@
+.search-widget-section {
+  width: 100%;
+  max-width: var(--containerWidth);
+  height: 0;
+  background-color: var(--gunmetal-1000);
+  overflow: hidden;
+  opacity: 0;
+  z-index: 51;
+  padding: 0 1.25rem 0;
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 200ms all ease-in-out;
+
+  &.show-search-widget {
+    height: var(--headerHeight);
+    opacity: 1;
+    top: 0%;
+    transition: 200ms all ease-in-out;
+  }
+
+  .search-widget-wrap {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .only-icon {
+      &:hover {
+        svg {
+          fill: var(--primaryLight-1000);
+        }
+      }
+    }
+  }
+}

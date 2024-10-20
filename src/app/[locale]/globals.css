@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    @apply  !font-jost;
+  }
+
+  /* .circleShapeButton {
+    @apply dark:bg-arcCustomBackground w-[2.875rem] h-[2.875rem] rounded-full bg-yellowIshFilter cursor-pointer hover:opacity-50 flex items-center justify-center;
+  } */
+}
+
+button:focus-visible {
+  outline: unset !important;
+  ;
+}
+
+
+.loader-parent {
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .full-body-loader {
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    img {
+      z-index: 9;
+      width: 6%;
+      text-shadow: var(--text-shadow);
+      filter: var(--drop-shadow);
+      color: var(--text-color);
+    }
+
+    span {
+      font-size: 25px;
+      font-weight: bold;
+      color: var(--text-color);
+      text-shadow: var(--text-shadow);
+      position: absolute;
+      bottom: -25px;
+    }
+  }
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* @media screen and (max-width: 1535px) {
+	.login-bg {
+		height: 100vh;
+	}
+} */
+
+.sidebar-scrollbar::-webkit-scrollbar {
+  width: 0;
+}
+
+.providerSelection::-webkit-scrollbar {
+  height: 3px;
+}
+
+.providerSelection::-webkit-scrollbar-thumb {
+  background-color: #C5910B;
+}
+
+.providerSelection::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+.accountTab {
+  border-radius: 10px;
+  background: linear-gradient(0deg, #1E2024 0%, rgba(30, 32, 36, 0.00) 100%);
+}
+
+input:focus, input:focus-visible {
+  border: 0;
+  outline: 0;
+}
+
+.walletButton {
+  border: 1.5px solid #FBB500;
+  box-shadow: 0px 0px 16px 0px #FF7A00 inset, 0px 0px 12px 0px rgba(255, 244, 144, 0.25);
+}
+
+.bg-arcAuthInput {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.cancelBtn {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profileBackground {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0.06) 46.64%, rgba(255, 255, 255, 0.07) 72.72%, rgba(255, 255, 255, 0.00) 95.59%);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+/* 
+.side-bar--close {
+  min-width: 0;
+  transition: 800ms ease-in-out;
+}
+
+.side-bar--open {
+  min-width: 230px;
+  transition: 800ms ease-in-out;
+  left: -100%;
+} */
+/* 
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 99dvh;
+  left: 0;
+} */
+
+/* .main-section-sidebar-close {
+  width: 100%;
+  margin-left: 0;
+  transition: 800ms ease-in-out;
+} */
+
+/* .main-section-sidebar-open { */
+  /* width: calc(100% - 230px); */
+  /* width: 100%; */
+  /* transition: 800ms ease-in-out; */
+  /* margin-left: 230px; */
+/* } */
+
+.account-active {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.19) 0%, rgba(255, 255, 255, 0.06) 46.64%, rgba(255, 255, 255, 0.07) 72.72%, rgba(255, 255, 255, 0.00) 95.59%);
+  border: 1px solid #FFE61A;
+  filter: drop-shadow(0px 0px 20px rgba(255, 230, 26, 0.40));
+}
+
+.chat-panel {
+  position: sticky;
+  top: 0;
+  height: 99%;
+
+  @media screen and (max-width: 1536px) {
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+}
+
+/* html {
+  body {
+    .sidebar-section {
+      transition: min-width 800ms ease-in-out;
+      transition: width 800ms ease-in-out;
+    }
+
+    .main-section, .sidebar {
+      transition: 800ms ease-in-out;
+    }
+  }
+} */

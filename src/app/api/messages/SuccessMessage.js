@@ -1,0 +1,28 @@
+const SuccessMessage = {
+  login: 'loggedInSuccess',
+  logout: 'loggedOutSuccess',
+  changePassword: 'profileMessagesChangePassword',
+  playerStatusUpdate: 'updatePlayerStatusSuccess',
+  createOperator: 'operatorUserCreatedSuccess',
+  resetPassword: 'passwordResetSuccess',
+  operatorDelete: 'operatorDeletedSuccess',
+  operatorStatusUpdate: 'operatorStatusUpdateSuccess',
+  signup: 'signupSuccess',
+  BetPlacedSuccessfully: 'BetPlacedSuccessfully',
+  PlayerEscapedSuccessfully: 'PlayerEscapedSuccessfully',
+  tokenVerify: 'tokenVerify',
+  emailVerify: 'emailVerify',
+  emailChangedSuccess: 'emailChangedSuccess',
+  profileUpdatedSuccess: 'profileUpdatedSuccess',
+  otpVerified: 'otpVerified',
+  otpSent: 'otpSentSuccess',
+  twoFADeactivated: 'twoFADeactivated',
+  wagerLimit: 'wagerLimit',
+  depositLimit: 'depositLimit',
+  lossLimit: 'lossLimit',
+  accountDisable: 'accountDisable',
+  sessionTimeout: 'sessionTimeout',
+  enrollTournament: 'enrollTournamentSuccess',
+};
+
+export default SuccessMessage;

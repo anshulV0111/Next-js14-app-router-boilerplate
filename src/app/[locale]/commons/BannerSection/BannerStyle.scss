@@ -1,0 +1,93 @@
+.banner-section {
+  margin-bottom: 1.5rem;
+  // max-height: 400px;
+
+  .banner-wrap {
+    .banner-img-box {
+      max-height: inherit;
+      position: relative;
+
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: inherit;
+        border-radius: 0.75rem;
+      }
+
+      .text-box {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        position: absolute;
+        top: 2.125rem;
+        right: 5.25rem;
+
+        .title-text {
+          color: var(--white-1000);
+          font-size: 2.625rem;
+          font-weight: 400;
+          line-height: 1.2;
+          text-align: right;
+          margin-bottom: 0.75rem;
+        }
+
+        .subtitle-text {
+          color: var(--white-1000);
+          font-size: 1.125rem;
+          font-weight: 500;
+          line-height: 1.2;
+          text-align: right;
+          margin-bottom: 1.75rem;
+        }
+      }
+    }
+
+    .embla {
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+
+      .embla__viewport {
+        border-radius: 0.75rem;
+        overflow: hidden;
+
+        .embla__container {
+          display: flex;
+
+          .embla__slide {
+            min-width: 0;
+            max-height: 20.125rem;
+            flex: 0 0 100%;
+          }
+        }
+      }
+
+      .embla__dots {
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.25rem;
+        position: absolute;
+        right: 5.25rem;
+        bottom: 2.125rem;
+
+        .embla__dot {
+          width: 1.5rem;
+          height: 0.375rem;
+          background-color: var(--onyx-1000);
+          border: 1px solid var(--primaryLight-500);
+          border-radius: 0.375rem;
+          display: inline-block;
+          transition: 300ms all ease-in-out;
+
+          &.embla__dot--selected {
+            width: 3.375rem;
+            background-color: var(--primaryLight-1000);
+          }
+        }
+      }
+    }
+  }
+}
